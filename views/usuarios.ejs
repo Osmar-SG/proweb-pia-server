@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="row justify-content-center bg-nav">
+            <div class="col-lg-3 centrar"><a href="index.html"> <img class="logo" src="img/logo.png " alt=""></a></div>
+            <div class="col-lg-6 centrar">
+                <p class="titulo">SISTEMA DE VENTAS</p>
+            </div>
+            <div class="row col-lg-3 centrar">
+                <div class="col-lg-8">
+                    <p class="texto-usuario">USUARIO: UsuarioX</p>
+                </div>
+                <div class="col-lg-4">
+                    <a href="index.html"><img class="logout" src="img/logout.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container-fluid vh-100">
+
+
+        <main>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="row btn-superior">
+                        <div class="col-lg-4">
+                            <a href="principal.html">
+                                <button class="back-button" aria-label="Volver"><img class="flecha-izq"
+                                        src="img/flechaizq.png" alt=""></button>
+                            </a>
+                        </div>
+                        <div class="col-lg-8 titulo-btn-superior">
+                            <p>Lista de usuarios</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="contenido-detalle-usuarios">
+
+
+
+                <div class="row">
+                    <div class="col-lg-4 row bloque-datos-usuarios">
+                        <div class="col-lg-12">
+                            <p class="titulo-cuadro-datos-reporte">DETALLE DE USUARIO</p>
+                        </div>
+                        <div class="col-lg-12">
+                            <p class="texto-datos-recuadro-reporte-users">NOMBRE:</p>
+                        </div>
+                        <div class="col-lg-12">
+                            <input class="input-entrada-texto-usuarios" type="text">
+                        </div>
+                        <div class="col-lg-12">
+                            <p class="texto-datos-recuadro-reporte-users">CONTRASEÑA:</p>
+                        </div>
+                        <div class="col-lg-12">
+                            <input class="input-entrada-texto-usuarios" type="text">
+                        </div>
+                        <div class="col-lg-12">
+                            <p class="texto-datos-recuadro-reporte-users">CONFIRMAR CONTRASEÑA:</p>
+                        </div>
+                        <div class="col-lg-12">
+                            <input class="input-entrada-texto-usuarios" type="text">
+                        </div>
+                        <div class="col-lg-12">
+                            <p class="texto-datos-recuadro-reporte-users">ROL:</p>
+                        </div>
+                        <div class="col-lg-12">
+                            <input class="input-entrada-texto-usuarios" type="text">
+                        </div>
+                        <div class="col-lg-12">
+                            <p class="texto-datos-recuadro-reporte-users">ESTADO:</p>
+                        </div>
+                        <div class="col-lg-12">
+                            <input class="input-entrada-texto-usuarios" type="text">
+                        </div>
+                        <div class="col-lg-12 centrar">
+                            <button class="btn-crud btn-crud-colors-1">
+                                <div class="row">
+                                    <div class="col-lg-1">
+                                        <img class="icon-btns-crud" src="img/ICON-SAVE.png" alt="">
+                                    </div>
+                                    <div class="col-lg-11">
+                                        <p class="texto-btn-crud-dentro">GUARDAR</p>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="col-lg-12 centrar">
+                            <button class="btn-crud btn-crud-colors-2">
+                                <div class="row">
+                                    <div class="col-lg-1">
+                                        <img class="icon-btns-crud" src="img/ICON-CLEAN.png" alt="">
+                                    </div>
+                                    <div class="col-lg-11">
+                                        <p class="texto-btn-crud-dentro">LIMPIAR</p>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="col-lg-12 centrar">
+                            <button class="btn-crud btn-crud-colors-3">
+                                <div class="row">
+                                    <div class="col-lg-1">
+                                        <img class="icon-btns-crud" src="img/ICON-TRASH-BLACK.png" alt="">
+                                    </div>
+                                    <div class="col-lg-11">
+                                        <p class="texto-btn-crud-dentro">ELIMINAR</p>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-8">
+                        <div class="row contenedor-datos-venta">
+                            <div class="col-lg-4">
+                                <p class="titulo-lista-usuarios">LISTA DE USUARIOS</p>
+                            </div>
+                            <div class="col-lg-8 row">
+                                <div class="col-lg-4">
+                                    <p class="texto-buscar-historial">Buscar por:</p>
+                                </div>
+                                <div class="col-lg-3">
+                                    <input class="input-texto-historial-busqueda" type="text">
+                                </div>
+                                <div class="col-lg-3">
+                                    <input class="input-texto-historial-busqueda" type="text">
+                                </div>
+                                <div class="col-lg-1">
+                                    <button class="texto-informacion-venta"><img class="icon-lupa" src="img/ICON-SEARCH.png" alt=""></button>
+                                </div>
+                                <div class="col-lg-1">
+                                    <button class="texto-informacion-venta"><img class="icon-lupa" src="img/ICON-CLEAN.png" alt=""></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+
+                        <div class="row contenedor-datos-venta">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="tabla-columna-principal"></th>
+                                        <th class="tabla-columna-principal"></th>
+                                        <th class="tabla-columna-principal">NOMBRE</th>
+                                        <th class="tabla-columna-principal">ROL</th>
+                                        <th class="tabla-columna-principal">ESTADO</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="tabla-info-productos"></td>
+                                        <td class="tabla-info-productos"></td>
+                                        <td class="tabla-info-productos"></td>
+                                        <td class="tabla-info-productos"></td>
+                                        <td class="tabla-info-productos"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+        </main>
+    </div>
+
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/FontAwesome.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

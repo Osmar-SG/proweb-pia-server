@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="row justify-content-center bg-nav">
+            <div class="col-lg-3 centrar"><a href="index.html"> <img class="logo" src="img/logo.png " alt=""></a></div>
+            <div class="col-lg-6 centrar">
+                <p class="titulo">SISTEMA DE VENTAS</p>
+            </div>
+            <div class="row col-lg-3 centrar">
+                <div class="col-lg-8">
+                    <p class="texto-usuario">USUARIO: UsuarioX</p>
+                </div>
+                <div class="col-lg-4">
+                    <a href="index.html"><img class="logout" src="img/logout.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container-fluid vh-100">
+
+
+        <main>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="row btn-superior">
+                        <div class="col-lg-4">
+                            <a href="principal.html">
+                                <button class="back-button" aria-label="Volver"><img class="flecha-izq"
+                                        src="img/flechaizq.png" alt=""></button>
+                            </a>
+                        </div>
+                        <div class="col-lg-8 titulo-btn-superior">
+                            <p>Ver detalle de una venta</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 row contenedor-busqueda">
+                    <div class="col-lg-6 text-end mt-3">
+                        <p class="texto-buscador">Numero de venta:</p>
+                    </div>
+                    <div class="col-lg-5">
+                        <input type="text">
+                    </div>
+                    <div class="col-lg-1">
+                        <button><img class="icon-lupa" src="img/ICON-SEARCH.png" alt=""></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contenido-detalle-venta">
+                <p class="texto-informacion-venta">Informacion de venta:</p>
+
+                <div class="row contenedor-datos-venta">
+                    <div class="col-lg-4">
+                        <p class="texto-detalles-venta-post">Fecha:</p>
+                        <input type="text">
+                    </div>
+                    <div class="col-lg-4">
+                        <p class="texto-detalles-venta-post">Tipo de documento:</p>
+                        <input type="text">
+                    </div>
+                    <div class="col-lg-4">
+                        <p class="texto-detalles-venta-post">Usuario:</p>
+                        <input type="text">
+                    </div>
+                </div>
+
+
+                <div class="contenedor-datos-venta">
+                    <div class="col-lg-6">
+                        <p class="texto-detalles-venta-post">Nombre del ciente:</p>
+                        <input type="text">
+                    </div>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="tabla-columna-principal">Producto</th>
+                                <th class="tabla-columna-principal">Precio</th>
+                                <th class="tabla-columna-principal">Cantidad</th>
+                                <th class="tabla-columna-principal">Subtotal</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="tabla-info-productos"></td>
+                                <td class="tabla-info-productos"></td>
+                                <td class="tabla-info-productos"></td>
+                                <td class="tabla-info-productos"></td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                    <div class="row contenedor-total-venta">
+                        <div class="col-lg-8">
+                            <button class="row">
+                                <div class="col-lg-3">
+                                    <i class="fa-solid fa-file-pdf fa-3x" style="color: #f00000;"></i>
+                                </div>
+                                <div class="col-lg-9">
+                                    <p class="texto-generar-pdf">Generar PDF</p>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="col-lg-4 row  justify-content-end">
+                            <div class="col-lg-5">
+                                <p class="texto-detalles-venta-post">Total de venta:</p>
+                            </div>
+                            <div class="col-lg-7">
+                                <input type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+        </main>
+    </div>
+
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/FontAwesome.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

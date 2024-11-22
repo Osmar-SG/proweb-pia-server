@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="row justify-content-center bg-nav">
+            <div class="col-lg-3 centrar"><a href="index.html"> <img class="logo" src="img/logo.png " alt=""></a></div>
+            <div class="col-lg-6 centrar">
+                <p class="titulo">SISTEMA DE VENTAS</p>
+            </div>
+            <div class="row col-lg-3 centrar">
+                <div class="col-lg-8">
+                    <p class="texto-usuario">USUARIO: UsuarioX</p>
+                </div>
+                <div class="col-lg-4">
+                    <a href="index.html"><img class="logout" src="img/logout.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container-fluid vh-100">
+
+
+        <main>
+            <div class="row btn-superior">
+                <div class="col-lg-4">
+                    <a href="principal.html">
+                        <button class="back-button" aria-label="Volver"><img class="flecha-izq" src="img/flechaizq.png"
+                                alt=""></button>
+                    </a>
+                </div>
+                <div class="col-lg-8 titulo-btn-superior">
+                    <p>Iniciar una venta</p>
+                </div>
+            </div>
+
+
+
+            <div class="content">
+                <div class="sidebar">
+                    <button class="sidebar-button" id="pizzaButton">
+                        <img class="icon-btn-sidebar" src="img/ICON-PIZZA.png" alt="">
+                        <p class="txt-btn-sidebar">PIZZAS</p>
+                    </button>
+                    <div id="pizzaModal" class="modal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2>PIZZAS</h2>
+                            </div>
+                            <div class="modal-body">
+                                <div id="pizzaList" class="item-list">
+                                    
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="close-btn">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <button class="sidebar-button" id="bebidasButton">
+                        <img class="icon-btn-sidebar" src="img/ICON-BEBIDA.png" alt="">
+                        <p class="txt-btn-sidebar">BEBIDAS</p>
+                    </button>
+                    <div id="bebidasModal" class="modal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2>BEBIDAS</h2>
+                            </div>
+                            <div class="modal-body">
+                                <div id="bebidasList" class="item-list">
+                                   
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="close-btn">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <button class="sidebar-button" id="combosButton">
+                        <img class="icon-btn-sidebar" src="img/ICON-COMBO.png" alt="">
+                        <p class="txt-btn-sidebar">COMBOS</p>
+                    </button>
+                    <div id="combosModal" class="modal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2>COMBOS</h2>
+                            </div>
+                            <div class="modal-body">
+                                <div id="combosList" class="item-list">
+                                   
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="close-btn">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <button class="sidebar-button" id="extrasButton">
+                        <img class="icon-btn-sidebar" src="img/ICON-ADD.png" alt="">
+                        <p class="txt-btn-sidebar">EXTRAS</p>
+                    </button>
+                    <div id="extrasModal" class="modal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2>EXTRAS</h2>
+                            </div>
+                            <div class="modal-body">
+                                <div id="extrasList" class="item-list">
+                                   
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="close-btn">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fecha">Fecha:</label>
+                            <input type="text" id="fecha" value="20/08/24">
+                        </div>
+                        <div class="form-group">
+                            <label for="documento">Tipo de documento:</label>
+                            <input type="text" id="documento" value="Boleta">
+                        </div>
+                        <div class="form-group">
+                            <label for="cliente">Nombre del cliente:</label>
+                            <input type="text" id="cliente">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <label for="producto">Producto:</label>
+                            <input type="text" id="producto">
+                        </div>
+                        <div class="col-lg-4">
+                            <label for="cantidad">Cantidad:</label>
+                            <input type="text" id="cantidad">
+                        </div>
+                        <div class="col-lg-4">
+                            <label for="cantidad">Codigo de producto:</label>
+                            <div class="row">
+                                <div class="col-lg-10"><input type="text" id="cantidad"></div>
+                                <div class="col-lg-2"><button><img class="icon-lupa" src="img/ICON-SEARCH.png"
+                                            alt=""></button></div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="tabla-columna-principal">Producto</th>
+                                        <th class="tabla-columna-principal">Precio</th>
+                                        <th class="tabla-columna-principal">Cantidad</th>
+                                        <th class="tabla-columna-principal">Subtotal</th>
+                                        <th class="columna-icon-trash"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="tabla-info-productos"></td>
+                                        <td class="tabla-info-productos"></td>
+                                        <td class="tabla-info-productos"></td>
+                                        <td class="tabla-info-productos"></td>
+                                        <td class="tabla-info-productos"><button><img class="icon-trash"
+                                                    src="img/ICON-TRASH.png" alt=""></button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="col-lg-4 cuadro-datos-venta">
+                            <div class="totals">
+                                <div class="form-group">
+                                    <p class="texto-datos-venta">Total a pagar:</p>
+                                    <input type="text" id="total" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <p class="texto-datos-venta">Paga con:</p>
+                                    <input type="text" id="pago">
+                                </div>
+                                <div class="form-group">
+                                    <p class="texto-datos-venta">Cambio:</p>
+                                    <input type="text" id="cambio" readonly>
+                                </div>
+                                <button class="create-sale">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <img class="img-icon-money" src="img/ICON-MONEY.png" alt="">
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p class="texto-btn-crearventa">CREAR VENTA</p>
+                                        </div>
+
+                                    </div>
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

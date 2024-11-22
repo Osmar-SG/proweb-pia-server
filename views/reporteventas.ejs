@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="row justify-content-center bg-nav">
+            <div class="col-lg-3 centrar"><a href="index.html"> <img class="logo" src="img/logo.png " alt=""></a></div>
+            <div class="col-lg-6 centrar">
+                <p class="titulo">SISTEMA DE VENTAS</p>
+            </div>
+            <div class="row col-lg-3 centrar">
+                <div class="col-lg-8">
+                    <p class="texto-usuario">USUARIO: UsuarioX</p>
+                </div>
+                <div class="col-lg-4">
+                    <a href="index.html"><img class="logout" src="img/logout.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container-fluid vh-100">
+
+
+        <main>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="row btn-superior">
+                        <div class="col-lg-4">
+                            <a href="principal.html">
+                                <button class="back-button" aria-label="Volver"><img class="flecha-izq"
+                                        src="img/flechaizq.png" alt=""></button>
+                            </a>
+                        </div>
+                        <div class="col-lg-8 titulo-btn-superior">
+                            <p>Reporte de ventas</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="contenido-detalle-venta">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <p class="texto-informacion-venta">Que tipo de reporte deseas ver ?</p>
+                    </div>
+                    <div class="col-lg-3">
+                        <select id="seleccion-tipo-reporte" name="reporte">
+                            <option value="diario">Diario</option>
+                            <option value="semanal">Semanal</option>
+                            <option value="mensual">Mensual</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-6 row contenedor-busqueda">
+                        <div class="col-lg-6 row">
+                            <div class="col-lg-6 text-end mt-3">
+                                <p class="texto-buscador texto-informacion-venta-parte1">FECHA INICIO:</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <input class="texto-informacion-venta" type="text" placeholder="**/**/**">
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6 row">
+                            <div class="col-lg-6 text-end mt-3">
+                                <p class="texto-buscador texto-informacion-venta-parte1">FECHA FIN:</p>
+                            </div>
+                            <div class="col-lg-5">
+                                <input class="texto-informacion-venta" type="text" placeholder="**/**/**">
+                            </div>
+                            <div class="col-lg-1">
+                                <button class="texto-informacion-venta"><img class="icon-lupa" src="img/ICON-SEARCH.png"
+                                        alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg-4 row bloque-datos-reportes">
+                        <div class="col-lg-12">
+                            <p class="titulo-cuadro-datos-reporte">Datos de las fechas pedidas</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p class="texto-datos-recuadro-reporte">Total vendido:</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="text">
+                        </div>
+                        <div class="col-lg-6">
+                            <p class="texto-datos-recuadro-reporte">Pizzas vendidas:</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="text">
+                        </div>
+                        <div class="col-lg-6">
+                            <p class="texto-datos-recuadro-reporte">Refrescos familiares:</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="text">
+                        </div>
+                        <div class="col-lg-6">
+                            <p class="texto-datos-recuadro-reporte">Refrescos individuales:</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="text">
+                        </div>
+                            <div class="col-lg-6">
+                            <p class="texto-datos-recuadro-reporte">Aderezos vendidos:</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="text">
+                            </div>
+
+
+                            <div class="boton-pdf-generar">
+                                <button class="row">
+                                    <div class="col-lg-3">
+                                        <i class="fa-solid fa-file-pdf fa-3x" style="color: #f00000;"></i>
+                                    </div>
+                                    <div class="col-lg-9">
+                                        <p class="texto-generar-pdf">Generar PDF</p>
+                                    </div>
+                                </button>
+                            </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+
+        </main>
+    </div>
+
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/FontAwesome.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

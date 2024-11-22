@@ -1,11 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
 </head>
+
 <body>
-  <h1>Hola Mundo!</h1>
+    <header>
+        <div class="row justify-content-center bg-nav">
+            <div class="col-lg-2 col-md-2 centrar"><a href="index.html"> <img class="logo" src="img/logo.png " alt=""></a></div>
+            <div class="col-lg-8 col-lg-8 centrar"><p class="titulo">SISTEMA DE VENTAS</p></div>
+            <div class="col-lg-2 col-lg-2 centrar"><a href="index.html"><img class="logout" src="img/logout.png" alt=""></a></div>
+        </div>
+    </header>
+
+
+
+
+    <main>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 bg-gris">
+                    <p class="titulo-login">INICIAR SESIÓN</p>
+                    
+                    <div class="row mb-3 align-items-center margin-recuadros-usuarios">
+                        <div class="col-4 text-end">
+                            <label for="usuario" class="form-label">USUARIO:</label>
+                        </div>
+                        <div class="col-1">
+                            <img class="icon-login" src="img/icon1.png" alt="icono usuario">
+                        </div>
+                        <div class="col-7">
+                            <input type="text" id="usuario" class="form-control" placeholder="Usuario">
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-4 align-items-center margin-recuadros-usuarios">
+                        <div class="col-4 text-end">
+                            <label for="contrasena" class="form-label">CONTRASEÑA:</label>
+                        </div>
+                        <div class="col-1">
+                            <img class="icon-login" src="img/icon2.png" alt="icono contraseña">
+                        </div>
+                        <div class="col-7">
+                            <input type="password" id="contrasena" class="form-control" placeholder="Contraseña">
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <a href="principal.html">
+                            <button class="btn-login">Enter</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+
+
+   
+
+
+
+
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
