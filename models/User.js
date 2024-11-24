@@ -15,6 +15,9 @@ module.exports = (sequelize) => {
       apellido: {
         type: DataTypes.STRING,
       },
+      contraseña: {
+        type: DataTypes.STRING,
+      },
       edad: {
         type: DataTypes.INTEGER,
       },
@@ -30,9 +33,9 @@ module.exports = (sequelize) => {
       email: {
         type: DataTypes.STRING,
       },
-      rol: {
-        type: DataTypes.ENUM("Administrador", "Vendedor", "Cliente"),
-      },
+      // rol: {
+      //   type: DataTypes.ENUM("Administrador", "Vendedor", "Cliente"),
+      // },
     }
     // { freezeTableName: true }
   );
