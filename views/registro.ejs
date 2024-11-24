@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <div class="row justify-content-center bg-nav">
+      <div class="col-lg-2 col-md-2 centrar"><a href="index.ejs"> <img class="logo" src="/images/logo.png " alt=""></a>
+      </div>
+      <div class="col-lg-8 col-lg-8 centrar">
+        <p class="titulo">SISTEMA DE VENTAS</p>
+      </div>
+      <div class="col-lg-2 col-lg-2 centrar"><a href="index.ejs"><img class="logout" src="/images/logout.png"
+            alt=""></a></div>
+    </div>
+  </header>
+
+
+
+
+  <main class="d-flex justify-content-center align-items-center vh-100">
+    <form class="register-form">
+      <!-- 2 column grid layout with text inputs for the first and last names -->
+      <div class="row mb-4">
+        <div class="col">
+          <div data-mdb-input-init class="form-outline">
+            <input type="text" id="form3Example1" class="form-control user_nombre" />
+            <label class="form-label" for="form3Example1">Nombre</label>
+          </div>
+        </div>
+        <div class="col">
+          <div data-mdb-input-init class="form-outline">
+            <input type="text" id="form3Example2" class="form-control user_apellido" />
+            <label class="form-label" for="form3Example2">Apellido</label>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-4">
+        <div class="col">
+          <div data-mdb-input-init class="form-outline">
+            <input type="number" id="form3Example3" class="form-control user_edad" />
+            <label class="form-label" for="form3Example3">Edad</label>
+          </div>
+        </div>
+        <div class="col">
+          <div data-mdb-input-init class="form-outline">
+            <input type="number" id="form3Example4" class="form-control user_telefono" />
+            <label class="form-label" for="form3Example4">Teléfono</label>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Email input -->
+      <div data-mdb-input-init class="form-outline mb-4">
+        <input type="email" id="form3Example5" class="form-control user_email" />
+        <label class="form-label" for="form3Example5">Email</label>
+      </div>
+
+      <!-- Direccion input -->
+      <div data-mdb-input-init class="form-outline mb-4">
+        <input type="email" id="form3Example6" class="form-control user_direccion" />
+        <label class="form-label" for="form3Example6">Dirección</label>
+      </div>
+    
+      <!-- Password input -->
+      <div data-mdb-input-init class="form-outline mb-4">
+        <input type="password" id="form3Example7" class="form-control user_contraseña" />
+        <label class="form-label" for="form3Example7">Contraseña</label>
+      </div>
+      <div data-mdb-input-init class="form-outline mb-4">
+        <input type="password" id="form3Example8" class="form-control user_confirm_contraseña" />
+        <label class="form-label" for="form3Example8">Confirma Contraseña</label>
+      </div>
+      <div data-mdb-input-init class="form-outline mb-4">
+        <select class="form-select user_rol" aria-label="Default select example">
+          <option selected>Selecciona el role de usuario</option>
+          <option value="Administrador">Administrador</option>
+          <option value="Vendedor">Vendedor</option>
+        </select>
+      </div>
+    
+      <!-- Submit button -->
+      <button data-mdb-ripple-init type="button" class="btn btn-primary btn-block mb-4 register_button">Registrar</button>
+    
+      </div>
+    </form>
+  </main>
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"></script>
+  <script src="/javascripts/jquery.js"></script>
+  <script src="/javascripts/bootstrap.js"></script>
+  <script src="/javascripts/registro.js"></script>
+</body>
+
+</html>

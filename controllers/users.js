@@ -37,8 +37,8 @@ module.exports = {
           contraseña,
         });
         const userRol = await Rol.create({ nombre: rol });
-        const rolFinal = await newUser.setRol(userRol);
-        res.status(200).json(rolFinal);
+        await newUser.setRol(userRol);
+        res.status(200).json(newUser);
       }
     } catch (error) {
       res.status(400).json({ message: error.message });

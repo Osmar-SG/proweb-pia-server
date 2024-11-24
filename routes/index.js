@@ -69,6 +69,8 @@ router.get("/reporteventas", isAuthenticated, (req, res) => {
   res.render("reporteventas");
 });
 
+router.get("/registro", (req, res) => res.render("registro"));
+
 /*No tocar*/
 router.use("/usuario", users);
 router.use("/ventas", ventas);
