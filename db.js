@@ -5,7 +5,7 @@ const path = require("path");
 
 //Hacemos la conexión a la base de datos por medio de sequelize
 let sequelize = new Sequelize(
-  `mysql://root:osmar2429@localhost:3306/PIA_PROWEB`,
+  `mysql://root:papu123@localhost:3306/sys`,
   {
     logging: false,
     native: false,

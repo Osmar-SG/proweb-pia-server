@@ -22,6 +22,10 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", routes); //creamos el middleware de las rutas para tener acceso a ellas y poder modularizar
 
+app.get('/cortecaja', (req, res) => {
+  res.render('historialcortecaja')
+})
+
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
