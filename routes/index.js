@@ -23,6 +23,42 @@ router.get("/principal", isAuthenticated, (req, res) => {
   res.render("principal");
 });
 
+router.get("/historialventa", isAuthenticated, (req, res) => {
+  res.render("historialventa");
+});
+
+router.get("/detalleventa", isAuthenticated, (req, res) => {
+  res.render("detalleventa");
+});
+
+router.get("/iniciarventa", isAuthenticated, (req, res) => {
+  res.render("iniciarventa");
+});
+
+router.get("/usuarios", isAuthenticated, (req, res) => {
+  res.render("usuarios");
+});
+
+router.get("/productos", isAuthenticated, (req, res) => {
+  res.render("productos");
+});
+
+router.get("/categorias", isAuthenticated, (req, res) => {
+  res.render("categorias");
+});
+
+router.get("/politicas", isAuthenticated, (req, res) => {
+  res.render("politicas");
+});
+
+router.get("/quiensomos", isAuthenticated, (req, res) => {
+  res.render("quiensomos");
+});
+
+router.get("/reporteventa", isAuthenticated, (req, res) => {
+  res.render("reporteventa");
+});
+/*No tocar*/
 router.use("/usuario", users);
 router.use("/ventas", ventas);
 router.use("/corteCaja", corteCajas);
