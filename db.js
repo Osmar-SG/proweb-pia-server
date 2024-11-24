@@ -5,7 +5,7 @@ const path = require("path");
 
 //Hacemos la conexión a la base de datos por medio de sequelize
 let sequelize = new Sequelize(
-  `mysql://root:papu123@localhost:3306/sys`,
+  `mysql://root:osmar2429@localhost:3306/PIA_PROWEB`,
   {
     logging: false,
     native: false,
@@ -55,11 +55,9 @@ const {
 
 //Aquí deben de ir las relaciones de las tablas a crear
 
-User.hasMany(CorteCaja);
-CorteCaja.belongsTo(User);
 
-User.hasMany(Ventas);
-Ventas.belongsTo(User);
+
+
 
 module.exports = {
   ...sequelize.models, //para poder importar los modelos así: const {Usuario, Producto} = require('./db.js')
