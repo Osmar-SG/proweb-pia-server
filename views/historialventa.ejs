@@ -17,7 +17,7 @@
 <body>
     <header>
         <div class="row justify-content-center bg-nav">
-            <div class="col-lg-3 centrar"><a href="/index.ejs"> <img class="logo" src="/images/logo.png " alt=""></a></div>
+            <div class="col-lg-3 centrar"><a href="/principal"> <img class="logo" src="/images/logo.png " alt=""></a></div>
             <div class="col-lg-6 centrar">
                 <p class="titulo">SISTEMA DE VENTAS</p>
             </div>
@@ -26,7 +26,7 @@
                     <p class="texto-usuario">USUARIO: UsuarioX</p>
                 </div>
                 <div class="col-lg-4">
-                    <a href="/index.ejs"><img class="logout" src="images/logout.png" alt=""></a>
+                    <a href="/principal"><img class="logout" src="images/logout.png" alt=""></a>
                 </div>
             </div>
         </div>
@@ -41,7 +41,7 @@
                 <div class="col-lg-4">
                     <div class="row btn-superior">
                         <div class="col-lg-4">
-                            <a href="/principal.ejs">
+                            <a href="/principal">
                                 <button class="back-button" aria-label="Volver"><img class="flecha-izq"
                                         src="/images/flechaizq.png" alt=""></button>
                             </a>
@@ -65,7 +65,7 @@
                                 <p class="texto-buscador texto-informacion-venta-parte1">FECHA INICIO:</p>
                             </div>
                             <div class="col-lg-6">
-                                <input class="texto-informacion-venta" type="text" placeholder="**/**/**">
+                                <input class="texto-informacion-venta" type="date" placeholder="**/**/**">
                             </div>
     
                         </div>
@@ -74,7 +74,7 @@
                                 <p class="texto-buscador texto-informacion-venta-parte1">FECHA FIN:</p>
                             </div>
                             <div class="col-lg-5">
-                                <input class="texto-informacion-venta" type="text" placeholder="**/**/**">
+                                <input class="texto-informacion-venta" type="date" placeholder="**/**/**">
                             </div>
                             <div class="col-lg-1">
                                 <button class="texto-informacion-venta"><img class="icon-lupa" src="/images/ICON-SEARCH.png" alt=""></button>
@@ -123,16 +123,13 @@
                             <tr>
                                 <th class="tabla-columna-principal">FECHA REGISTRO</th>
                                 <th class="tabla-columna-principal">MONTO TOTAL</th>
-                                <th class="tabla-columna-principal">NUMERO DOCUMENTO</th>
                                 <th class="tabla-columna-principal">USUARIO REGISTRO</th>
-                                <th class="tabla-columna-principal">NOMBRE CLIENTE</th>
                                 <th class="tabla-columna-principal">CODIGO PRODUCTO</th>
                                 <th class="tabla-columna-principal">NOMBRE PRODUCTO</th>
                                 <th class="tabla-columna-principal">PRECIO VENTA</th>
-
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="table_body">
                             <tr>
                                 <td class="tabla-info-productos"></td>
                                 <td class="tabla-info-productos"></td>
@@ -140,9 +137,6 @@
                                 <td class="tabla-info-productos"></td>
                                 <td class="tabla-info-productos"></td>
                                 <td class="tabla-info-productos"></td>
-                                <td class="tabla-info-productos"></td>
-                                <td class="tabla-info-productos"></td>
-
                             </tr>
                         </tbody>
                     </table>
@@ -159,10 +153,11 @@
 
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"></script>
     <script src="/javascripts/jquery.js"></script>
     <script src="/javascripts/bootstrap.js"></script>
     <script src="/javascripts/FontAwesome.js"></script>
-    <script src="/javascripts/main.js"></script>
+    <script src="/javascripts/historialVentas.js"></script>
 </body>
 
 </html>

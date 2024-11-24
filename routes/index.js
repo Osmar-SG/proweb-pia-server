@@ -4,6 +4,8 @@ const users = require("./users");
 const ventas = require("./ventas");
 const corteCajas = require("./corteCajas");
 const categoriaProducto = require("./categoriaProducto");
+const productos = require("./productos");
+const detalleVenta = require("./detalleVentas");
 
 // Crea una función que sea el middleware para verificar la autentificación
 const isAuthenticated = (req, res, next) => {
@@ -51,17 +53,28 @@ router.get("/politicas", isAuthenticated, (req, res) => {
   res.render("politicas");
 });
 
-router.get("/quiensomos", isAuthenticated, (req, res) => {
+router.get("/quiensomos", (req, res) => {
   res.render("quiensomos");
 });
 
 router.get("/reporteventa", isAuthenticated, (req, res) => {
   res.render("reporteventa");
 });
+
+router.get("/politicas", (req, res) => {
+  res.render("politicas");
+});
+
+router.get("/reporteventas", isAuthenticated, (req, res) => {
+  res.render("reporteventas");
+});
+
 /*No tocar*/
 router.use("/usuario", users);
 router.use("/ventas", ventas);
 router.use("/corteCaja", corteCajas);
 router.use("/categoriaProducto", categoriaProducto);
+router.use("/productos", productos);
+router.use("/detalleVentas", detalleVenta);
 
 module.exports = router;
