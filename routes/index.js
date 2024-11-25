@@ -69,6 +69,15 @@ router.get("/reporteventas", isAuthenticated, (req, res) => {
   res.render("reporteventas");
 });
 
+router.get("/historialcortecaja", isAuthenticated, (req, res) => {
+  res.render("historialcortecaja");
+});
+
+router.get("/cortecaja", isAuthenticated, (req, res) => {
+  res.render("iniciarCerrarJornada");
+});
+
+
 router.get("/registro", (req, res) => res.render("registro"));
 
 /*No tocar*/

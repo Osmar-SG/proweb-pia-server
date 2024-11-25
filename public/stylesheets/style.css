@@ -6,8 +6,9 @@ body {
 a {
   color: #00B7FF;
 }
+
 /*--------------------------------GLOBALES-----------------------------------------*/
-:root{
+:root {
   --fuentePrincipal: "Inter", sans-serif;
   --fuenteSecundaria: "Montserrat", serif;
 
@@ -18,7 +19,8 @@ a {
   --gris: #bfbfbf;
 }
 
-body, html{
+body,
+html {
   display: grid;
   height: 100vh;
   grid-template-rows: auto 1fr auto;
@@ -27,15 +29,24 @@ body, html{
   height: 100%;
 }
 
-h1, h2, h3, h4, h5, h6, p{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   font-family: var(--fuentePrincipal);
 }
-a{
+
+a {
   text-decoration: none;
 }
-button{
+
+button {
   border: none;
 }
+
 .container {
   display: flex;
   flex-direction: column;
@@ -43,17 +54,19 @@ button{
 }
 
 /*----------------------------------------BTN-SUPERIOR-------------------------------------*/
-.flecha-izq{
+.flecha-izq {
   width: 50px;
   margin-top: 5px;
 }
-.btn-superior{
+
+.btn-superior {
   background-color: var(--primario);
   width: 400px;
   margin-bottom: 30px;
   border-radius: 50px;
 }
-.titulo-btn-superior{
+
+.titulo-btn-superior {
   font-weight: 700;
   margin-top: 15px;
   font-size: 20px;
@@ -62,72 +75,88 @@ button{
 
 /*--------------------------------------HEADER------------------------------------------*/
 
-header{
+nav,
+.bg-nav {
+  background-color: var(--primario);
+}
+
+.bg-secundario {
+  background-color: var(--secundario);
+}
+
+header {
   background-color: var(--primario);
   height: auto;
 }
-.logo{
+
+.logo {
   width: 90px;
   height: 90px;
   margin: 10px;
 }
-.titulo{
+
+.titulo {
   font-family: var(--fuentePrincipal);
   font-weight: 700;
   padding-top: 10px;
   font-size: 40px;
   margin: 10px;
 }
-.logout{
+
+.logout {
   width: 60px;
   height: 60px;
   margin: 10px;
 }
-.centrar{
+
+.centrar {
   text-align: center;
   align-items: center;
 }
-.texto-usuario{
+
+.texto-usuario {
   font-weight: 700;
 }
 
 /*----------------------------------MAIN-LOGIN---------------------------------------*/
 
-.bg-gris{
+.bg-gris {
   background-color: var(--gris);
- padding: 40px 50px;
+  padding: 40px 50px;
   border-radius: 20px;
   width: 1000px;
   height: 600px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
   text-align: center;
   margin: auto;
 }
-.titulo-login{
+
+.titulo-login {
   font-family: var(--fuentePrincipal);
   font-weight: 700;
   margin-bottom: 30px;
   font-size: 50px;
 }
-.icon-login{
+
+.icon-login {
   width: 24px;
   height: 24px;
 }
 
-.btn-login{
+.btn-login {
   padding: 0.5em 2em;
   margin-top: 70px;
-font-size: 20px;
-text-transform: uppercase;
-font-weight: bold;
-color: #fff;
-background-color:#666;
-border: none;
-border-radius: 20px;
-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-transition: all 0.3s ease;
-cursor: pointer;
-outline: none;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+  background-color: #666;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  outline: none;
 }
 
 .btn-login:hover {
@@ -141,7 +170,7 @@ outline: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh; 
+  height: 80vh;
 }
 
 .text-center {
@@ -149,17 +178,19 @@ outline: none;
   font-weight: bold;
   color: #333;
 }
-.form-label{
+
+.form-label {
   font-size: 30px;
   font-weight: bold;
 }
-.margin-recuadros-usuarios{
+
+.margin-recuadros-usuarios {
   margin-top: 80px;
 }
 
 /*------------------------PANTALLA PRINCIPAL DEL SISTEMA---------------------------*/
 
-.cuadros{
+.cuadros {
   background-color: var(--primario);
   border-radius: 20px;
   border: 20px;
@@ -168,7 +199,8 @@ outline: none;
   width: 30%;
   height: 200px;
 }
-.cuadros-2{
+
+.cuadros-2 {
   background-color: var(--gris);
   border-radius: 20px;
   border: 20px;
@@ -177,17 +209,20 @@ outline: none;
   width: 30%;
   height: 200px;
 }
-.contenedor-cuad{
+
+.contenedor-cuad {
   max-width: 90%;
   margin: auto;
 }
-.texto-cuadro{
+
+.texto-cuadro {
   color: var(--blanco);
   font-size: 50px;
   padding: 8%;
   font-weight: 500;
 }
-.cuadros-xs{
+
+.cuadros-xs {
   background-color: var(--primario);
   border-radius: 20px;
   border: 20px;
@@ -196,7 +231,8 @@ outline: none;
   height: 90px;
   width: 93%;
 }
-.texto-cuadro-xs{
+
+.texto-cuadro-xs {
   color: var(--blanco);
   font-size: 40px;
   padding: 10px;
@@ -210,6 +246,7 @@ outline: none;
   display: flex;
   align-items: center;
 }
+
 .back-button {
   background: none;
   border: none;
@@ -218,6 +255,7 @@ outline: none;
   cursor: pointer;
   margin-left: 10px;
 }
+
 main {
   flex-grow: 1;
   padding: 20px;
@@ -229,11 +267,13 @@ main {
   display: flex;
   gap: 20px;
 }
+
 .sidebar {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+
 .sidebar-button {
   width: 140px;
   height: 100px;
@@ -247,74 +287,91 @@ main {
   justify-content: center;
   cursor: pointer;
 }
-.icon-btn-sidebar{
+
+.icon-btn-sidebar {
   width: 60px;
   height: 60px;
   margin-top: 10px;
 }
-.icon-trash{
+
+.icon-trash {
   width: 30px;
   height: 30px;
 }
-.tabla-columna-principal{
+
+.tabla-columna-principal {
   background-color: gray;
   text-align: center;
 }
-.tabla-info-productos{
+
+.tabla-info-productos {
   background-color: var(--gris);
   height: 40px;
 }
-.columna-icon-trash{
+
+.columna-icon-trash {
   width: 30px;
   text-align: center;
 }
-.txt-btn-sidebar{
+
+.txt-btn-sidebar {
   color: var(--negro);
   font-weight: 700;
 }
-.icon-lupa{
+
+.icon-lupa {
   width: 25px;
   height: 25px;
   border: none;
 }
+
 .main-content {
   flex-grow: 1;
   background-color: var(--secundario);
   padding: 20px;
   border-radius: 5px;
 }
+
 .form-row {
   display: flex;
   gap: 10px;
   margin-top: -20px;
   margin-bottom: 10px;
 }
+
 .form-group {
   flex: 1;
   margin-top: 30px;
 }
+
 label {
   display: block;
   margin-bottom: 5px;
 }
+
 input[type="text"] {
   width: 100%;
   padding: 5px;
   border: 1px solid #ccc;
 }
+
 table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
 }
-th, td {
+
+th,
+td {
   border: 3px solid #000;
   padding: 5px;
   text-align: left;
 }
+
 .totals {
   margin-top: 20px;
 }
+
 .create-sale {
   background-color: var(--gris);
   color: gray;
@@ -325,21 +382,25 @@ th, td {
   margin-top: 50px;
   margin-bottom: 10px;
 }
-.cuadro-datos-venta{
+
+.cuadro-datos-venta {
   background-color: var(--primario);
   margin-top: 30px;
 }
-.texto-datos-venta{
+
+.texto-datos-venta {
   font-weight: 700;
   font-size: 20px;
 }
-.texto-btn-crearventa{
+
+.texto-btn-crearventa {
   color: var(--blanco);
   font-weight: 700;
   font-size: 40px;
   margin-top: 10px;
 }
-.img-icon-money{
+
+.img-icon-money {
   width: 140px;
   height: 140px;
 }
@@ -427,6 +488,7 @@ th, td {
 .close-btn:hover {
   background-color: #D3D3D3;
 }
+
 /*-----------------------------------POLITICAS DE LA EMPRESA--------------------------------*/
 
 
@@ -456,12 +518,13 @@ th, td {
 
 /*---------------------------------------QUIENES SOMOS-------------------------------------*/
 
-.titulo-nosot{
+.titulo-nosot {
   font-weight: 900;
   font-size: 70px;
   margin-top: 70px;
 }
-.texto-nosotros{
+
+.texto-nosotros {
   text-align: center;
   font-weight: bold;
   font-size: 20px;
@@ -469,40 +532,48 @@ th, td {
 
 /*--------------------------------------VER DETALLE DE UNA VENTA---------------------------------*/
 
-.contenido-detalle-venta{
+.contenido-detalle-venta {
   background-color: var(--secundario);
   height: auto;
 }
-.texto-buscador{
+
+.texto-buscador {
   font-weight: 700;
   font-size: 20px;
   margin-top: -10px;
 }
-.texto-informacion-venta{
+
+.texto-informacion-venta {
   font-weight: 700;
   font-size: 20px;
   margin-top: 25px;
 }
-.contenedor-busqueda{
+
+.contenedor-busqueda {
   margin-top: 10px;
 }
-.contenedor-datos-venta{
+
+.contenedor-datos-venta {
   background-color: var(--primario);
   padding: 30px;
   margin: 30px;
 }
-.texto-detalles-venta-post{
+
+.texto-detalles-venta-post {
   font-weight: 700;
   font-size: 20px;
 }
-.contenedor-total-venta{
+
+.contenedor-total-venta {
   margin-top: 100px;
 }
-.icon-pdf{
+
+.icon-pdf {
   width: 300px;
   height: 300px;
 }
-.texto-generar-pdf{
+
+.texto-generar-pdf {
   color: var(--negro);
   font-weight: 700;
   font-size: 20px;
@@ -511,19 +582,22 @@ th, td {
 
 /*----------------------------------------HISTORIAL DE VENTAS--------------------------------------*/
 
-.texto-informacion-venta-parte1{
+.texto-informacion-venta-parte1 {
   margin-top: 15px;
 }
-.texto-buscar-historial{
+
+.texto-buscar-historial {
   font-weight: 700;
   font-size: 20px;
   margin-top: 20px;
   text-align: end;
 }
-.input-texto-historial-busqueda{
+
+.input-texto-historial-busqueda {
   margin-top: 20px;
 }
-.contenedor-tabla-historial{
+
+.contenedor-tabla-historial {
   background-color: var(--primario);
   padding: 30px;
   margin: 30px;
@@ -531,74 +605,87 @@ th, td {
 }
 
 /*-----------------------------------------REPORTE DE VENTAS------------------------------------------*/
-#seleccion-tipo-reporte{
+#seleccion-tipo-reporte {
   margin-top: 20px;
   font-size: 20px;
   width: 200px;
   height: 40px;
   margin-left: -80px;
 }
-.bloque-datos-reportes{
+
+.bloque-datos-reportes {
   background-color: var(--gris);
   margin-left: 30px;
   height: 700px;
 }
-.titulo-cuadro-datos-reporte{
+
+.titulo-cuadro-datos-reporte {
   font-weight: 700;
   font-size: 30px;
   margin-top: 20px;
   text-align: center;
 }
-.texto-datos-recuadro-reporte{
+
+.texto-datos-recuadro-reporte {
   font-weight: 700;
   font-size: 20px;
 }
-.boton-pdf-generar{
+
+.boton-pdf-generar {
   margin-top: 200px;
 }
 
 /*---------------------------------USUARIOS--------------------------*/
 
-.contenido-detalle-usuarios{
+.contenido-detalle-usuarios {
   background-color: var(--secundario);
 }
-.bloque-datos-usuarios{
+
+.bloque-datos-usuarios {
   background-color: var(--primario);
   margin-left: 10px;
   height: auto;
 }
-.btn-crud{
+
+.btn-crud {
   margin-top: 20px;
   font-size: 20px;
   width: 300px;
   height: 40px;
 }
-.icon-btns-crud{
+
+.icon-btns-crud {
   width: 30px;
   height: 30px;
 }
-.texto-btn-crud-dentro{
+
+.texto-btn-crud-dentro {
   margin-top: 5px;
   font-weight: 700;
   color: var(--blanco);
 }
-.btn-crud-colors-1{
+
+.btn-crud-colors-1 {
   background-color: green;
   margin-top: 80px;
 }
-.btn-crud-colors-2{
+
+.btn-crud-colors-2 {
   background-color: blue;
 }
-.btn-crud-colors-3{
+
+.btn-crud-colors-3 {
   background-color: red;
 }
-.texto-datos-recuadro-reporte-users{
+
+.texto-datos-recuadro-reporte-users {
   font-weight: 700;
   font-size: 20px;
   margin-bottom: -5px;
   margin-top: 40px;
 }
-.titulo-lista-usuarios{
+
+.titulo-lista-usuarios {
   font-weight: 700;
   font-size: 30px;
   margin-top: 10px;
@@ -667,4 +754,5 @@ th, td {
   width: 200px;
   height: 40px;
 }
+
 /*-----------------------------------------REGISTRO-----------------------------------------*/
