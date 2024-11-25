@@ -2,7 +2,7 @@ const { CategoriaProducto } = require("../db");
 
 const categorias = [
   {
-    nombre: "Pizzas",
+    nombre: "Pizza",
     descripcion: "Pizzas de diferentes tamaños y sabores",
     imagen: "url de la imagen",
     status: true,

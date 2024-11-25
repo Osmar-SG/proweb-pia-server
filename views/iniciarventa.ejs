@@ -137,7 +137,7 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="fecha">Fecha:</label>
-                            <input type="text" id="fecha" value="20/08/24">
+                            <input type="date" id="fecha" >
                         </div>
                         <div class="form-group">
                             <label for="documento">Tipo de documento:</label>
@@ -151,19 +151,21 @@
                     <div class="row">
                         <div class="col-lg-4">
                             <label for="producto">Producto:</label>
-                            <input type="text" id="producto">
+                            <input type="text" id="producto" class="venta_nombre">
                         </div>
                         <div class="col-lg-4">
                             <label for="cantidad">Cantidad:</label>
-                            <input type="text" id="cantidad">
+                            <input type="text" id="cantidad" class="venta_cantidad">
                         </div>
                         <div class="col-lg-4">
                             <label for="cantidad">Codigo de producto:</label>
                             <div class="row">
-                                <div class="col-lg-10"><input type="text" id="cantidad"></div>
-                                <div class="col-lg-2"><button><img class="icon-lupa" src="images/ICON-SEARCH.png"
-                                            alt=""></button></div>
-
+                                <div class="col-lg-10">
+                                    <input type="text" id="cantidad" class="venta_codigo">
+                                </div>
+                                <div class="col-lg-2"><button>
+                                    <img class="icon-lupa search_product" src="images/ICON-SEARCH.png"alt="search"></button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -179,15 +181,16 @@
                                         <th class="columna-icon-trash"></th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
+                                <tbody class="table_body">
+                                    <!-- <tr class="tabla-info-fila">
                                         <td class="tabla-info-productos"></td>
                                         <td class="tabla-info-productos"></td>
                                         <td class="tabla-info-productos"></td>
                                         <td class="tabla-info-productos"></td>
-                                        <td class="tabla-info-productos"><button><img class="icon-trash"
-                                                    src="images/ICON-TRASH.png" alt=""></button></td>
-                                    </tr>
+                                        <td class="tabla-info-productos">
+                                            <button><img class="icon-trash"src="images/ICON-TRASH.png" alt=""></button>
+                                        </td>
+                                    </tr> -->
                                 </tbody>
                             </table>
                         </div>
