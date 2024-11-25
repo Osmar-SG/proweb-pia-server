@@ -6,6 +6,7 @@ const ventaDetalleFunctions = require("./initialDatabase/ventaDetalles");
 const ventasFunctions = require("./initialDatabase/ventas");
 const userFunctions = require("./initialDatabase/usuario");
 const rolFunctions = require("./initialDatabase/rol");
+const corteCajaFunctions = require("./initialDatabase/corteCajas");
 
 const PORT = process.env.PORT || 3000;
 
@@ -27,6 +28,7 @@ conn.sync({ force: true }).then(() => {
     await productoFunctions.productosDB();
     await ventasFunctions.ventasDB();
     await ventaDetalleFunctions.ventaDetalleDB();
+    await corteCajaFunctions.corteCajasDB();
     console.log(`servidor listo y escuchando en el puerto ${PORT}`);
   });
 });

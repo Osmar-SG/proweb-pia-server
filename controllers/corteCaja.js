@@ -19,4 +19,35 @@ module.exports = {
       res.status(400).json({ message: error.message });
     }
   },
+  obtenerTodosCorteCaja: async (req, res) => {
+    try {
+      const corteCajas = await CorteCaja.findAll({
+        include: [{ model: User }],
+      });
+      res.status(200).json(corteCajas);
+    } catch (error) {
+      res.status(400).json({ message: error.message });
+    }
+  },
+  obtenerCorteCajaById: async (req, res) => {
+    const { id } = req.params;
+    try {
+      const corteCajas = await CorteCaja.findOne({
+        where: { id },
+        include: [{ model: User }],
+      });
+      res.status(200).json(corteCajas);
+    } catch (error) {
+      res.status(400).json({ message: error.message });
+    }
+  },
+  obtenerCortePorUserId: async (req, res) => {
+    const { userId } = req.params;
+    try {
+      const corteCaja = await CorteCaja.findAll({ where: { userId } });
+      res.status(200).json(corteCaja);
+    } catch (error) {
+      res.status(400).json({ message: error.message });
+    }
+  },
 };
