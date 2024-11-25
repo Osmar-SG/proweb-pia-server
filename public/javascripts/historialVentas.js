@@ -1,3 +1,7 @@
+const formatNumber = new Intl.NumberFormat("es-MX", {
+  style: "currency",
+  currency: "MXN",
+});
 const cargarVentas = async () => {
   try {
     const response = await axios.get("/detalleVentas");
@@ -10,10 +14,7 @@ const cargarVentas = async () => {
       const fechaCelda = document.createElement("td");
       fechaCelda.textContent = detalleVenta.venta.fecha;
       const montoCelda = document.createElement("td");
-      montoCelda.textContent = new Intl.NumberFormat("es-MX", {
-        style: "currency",
-        currency: "MXN",
-      }).format(detalleVenta.venta.total);
+      montoCelda.textContent = formatNumber.format(detalleVenta.venta.total);
       const usuarioCelda = document.createElement("td");
       usuarioCelda.textContent = detalleVenta.venta.user.nombre;
       const codigoProductoCelda = document.createElement("td");
@@ -21,7 +22,9 @@ const cargarVentas = async () => {
       const nombreProductoCelda = document.createElement("td");
       nombreProductoCelda.textContent = detalleVenta.producto.nombre;
       const precioVentaCelda = document.createElement("td");
-      precioVentaCelda.textContent = detalleVenta.producto.precio;
+      precioVentaCelda.textContent = formatNumber.format(
+        detalleVenta.producto.precio
+      );
 
       //Agregamos las celdas a la fila
       fila.appendChild(fechaCelda);

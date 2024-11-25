@@ -3,6 +3,9 @@ const { conn } = require("./db");
 const cProductoFunctions = require("./initialDatabase/categoriaProducto");
 const productoFunctions = require("./initialDatabase/productos");
 const ventaDetalleFunctions = require("./initialDatabase/ventaDetalles");
+const ventasFunctions = require("./initialDatabase/ventas");
+const userFunctions = require("./initialDatabase/usuario");
+const rolFunctions = require("./initialDatabase/rol");
 
 const PORT = process.env.PORT || 3000;
 
@@ -18,9 +21,12 @@ const PORT = process.env.PORT || 3000;
 conn.sync({ force: true }).then(() => {
   //cambiar a force:false para dejar de borrar las tablas al reiniciar el servidor
   server.listen(PORT, async () => {
+    await userFunctions.userDB();
+    await rolFunctions.rolDB();
     await cProductoFunctions.categoriasDb();
     await productoFunctions.productosDB();
-    // await ventaDetalleFunctions.ventaDetalleDB();
+    await ventasFunctions.ventasDB();
+    await ventaDetalleFunctions.ventaDetalleDB();
     console.log(`servidor listo y escuchando en el puerto ${PORT}`);
   });
 });

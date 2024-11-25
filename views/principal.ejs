@@ -23,7 +23,7 @@
             </div>
             <div class="row col-lg-3 centrar">
                 <div class="col-lg-8">
-                    <p class="texto-usuario">USUARIO: UsuarioX</p>
+                    <p class="texto-usuario">USUARIO: <span class="usuario-nombre"></span></p>
                 </div>
                 <div class="col-lg-4">
                     <a href="/principal"><img class="logout" src="/images/logout.png" alt=""></a>
@@ -38,13 +38,13 @@
 
 
         <div class="contenedor-cuad">
-            <div class="row justify-content-between">
-                <div class="col-lg-4 col-md-6 col-sm-12 cuadros">
+            <div class="row justify-content-between ">
+                <div class="col-lg-4 col-md-6 col-sm-12 cuadros admin-element">
                     <a href="/historialventa">
                         <p class="texto-cuadro">Historial de ventas</p>
                     </a>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 cuadros">
+                <div class="col-lg-4 col-md-6 col-sm-12 cuadros admin-element">
                     <a href="/detalleventa">
                         <p class="texto-cuadro">Ver detalle de una venta</p>
                     </a>
@@ -56,7 +56,7 @@
                 </div>
 
 
-                <div class="col-lg-4 col-md-6 col-sm-12 cuadros-2">
+                <div class="col-lg-4 col-md-6 col-sm-12 cuadros-2 admin-element">
                     <a href="/usuarios">
                         <p class="texto-cuadro">Lista de usuarios</p>
                     </a>
@@ -115,9 +115,11 @@
 
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"></script>
     <script src="/javascripts/jquery.js"></script>
     <script src="/javascripts/bootstrap.js"></script>
-    <script src="/javascripts/main.js"></script>
+    <script src="/javascripts/header.js"></script>
+    <script src="/javascripts/principal.js"></script>
 </body>
 
 </html>

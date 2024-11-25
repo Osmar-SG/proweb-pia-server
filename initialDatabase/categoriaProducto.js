@@ -8,13 +8,19 @@ const categorias = [
     status: true,
   },
   {
-    nombre: "Refrescos",
+    nombre: "Bebidas",
     descripcion: "Refrescos de diferentes tamaños y sabores",
     imagen: "url de la imagen",
     status: true,
   },
   {
-    nombre: "Entradas",
+    nombre: "Combos",
+    descripcion: "Paquetes de pizza y adicionales a mejor precio",
+    imagen: "url de la imagen",
+    status: true,
+  },
+  {
+    nombre: "Extras",
     descripcion: "Papas fritas, boneless, alitas, etc",
     imagen: "url de la imagen",
     status: true,
