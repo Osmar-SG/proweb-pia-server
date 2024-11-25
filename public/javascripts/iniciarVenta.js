@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", async function () {
   const ventaCodigo = document.querySelector(".venta_codigo");
   const searchButton = document.querySelector(".search_product");
 
+  let productos = [];
+
   //buscamos todas las categorias disponibles en la BD
   const getProductsCategories = await axios.get(
     "/categoriaProducto/obtenerTodos"
@@ -14,7 +16,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     currency: "MXN",
   });
 
-  //creamos una función para buscar el producto por nombre o código
+  //creamos una función para buscar el producto por nombre o código y lo agregamos a la lista de compra
   const buscarProducto = async () => {
     try {
       const response = await axios.post("/productos/busqueda", {
@@ -27,31 +29,42 @@ document.addEventListener("DOMContentLoaded", async function () {
       const fila = document.createElement("tr");
       fila.className = "tabla-info-fila";
 
+      const idCelda = document.createElement("td");
+      idCelda.className = "producto_id";
+      idCelda.style.display = "none";
+      idCelda.textContent = productoEncontrado.id;
+
       const productoCelda = document.createElement("td");
-      productoCelda.className = "tabla-info-productos";
+      productoCelda.className = "tabla-info-productos producto_nombre";
       productoCelda.innerText = productoEncontrado.nombre;
 
       const precioCelda = document.createElement("td");
-      productoCelda.className = "tabla-info-productos";
+      precioCelda.className = "tabla-info-productos producto_precio";
       precioCelda.innerText = productoEncontrado.precio;
 
       const cantidadCelda = document.createElement("td");
-      productoCelda.className = "tabla-info-productos";
+      cantidadCelda.className = "tabla-info-productos producto_cantidad";
       cantidadCelda.innerText = ventaCantidad.value;
 
       const subtotalCelda = document.createElement("td");
-      productoCelda.className = "tabla-info-productos";
+      subtotalCelda.className = "tabla-info-productos producto_subtotal";
       const cantidad = parseInt(ventaCantidad.value, 10) || 0;
       const total = cantidad * productoEncontrado.precio;
       subtotalCelda.innerText = formatNumber.format(total);
 
       const botonAccion = document.createElement("td");
-      productoCelda.className = "tabla-info-productos";
+      botonAccion.className = "tabla-info-productos";
       const boton = document.createElement("button");
-      boton.innerHTML = `<img class="icon-trash"src="images/ICON-TRASH.png" alt=""/>`;
+      const imageTrash = document.createElement("img");
+      imageTrash.className = "icon-trash";
+      imageTrash.src = "images/ICON-TRASH.png";
+      imageTrash.alt = "delete element";
+      boton.appendChild(imageTrash);
+      botonAccion.appendChild(boton);
 
       boton.addEventListener("click", () => fila.remove());
 
+      fila.appendChild(idCelda);
       fila.appendChild(productoCelda);
       fila.appendChild(precioCelda);
       fila.appendChild(cantidadCelda);
@@ -59,6 +72,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       fila.appendChild(botonAccion);
 
       tbody.appendChild(fila);
+      pagoVenta();
     } catch (error) {
       console.log(error);
     }
@@ -124,8 +138,76 @@ document.addEventListener("DOMContentLoaded", async function () {
         modal.style.display = "none";
       }
     });
-
-    searchButton.removeEventListener("click", buscarProducto);
-    searchButton.addEventListener("click", buscarProducto);
   });
+  searchButton.addEventListener("click", buscarProducto);
+
+  //creamos la función para que tome los datos del subtotal y generar la venta
+  const crearVenta = async () => {
+    const filas = document.querySelectorAll(".tabla-info-fila");
+    const userId = user.id;
+    const fecha = document.querySelector(".fecha_venta");
+
+    filas.forEach(async (fila) => {
+      try {
+        const cantidad = fila.querySelector(
+          ".tabla-info-productos.producto_cantidad"
+        );
+        const productoId = fila.querySelector(".producto_id");
+
+        const cantidadValor = cantidad ? cantidad.textContent.trim() : null;
+        const productoIdValor = productoId
+          ? productoId.textContent.trim()
+          : null;
+
+        await axios.post("/detalleVentas", {
+          cantidad: cantidadValor,
+          productoId: productoIdValor,
+          fecha: fecha.value,
+          userId: userId,
+        });
+        console.log("venta creada con exito");
+      } catch (error) {
+        console.log(error);
+      }
+    });
+    alert("Venta creada con exito");
+    window.location.href = "/iniciarventa";
+  };
+  const crearVentaButton = document.querySelector(".crearVenta_button");
+  crearVentaButton.addEventListener("click", crearVenta);
+
+  //Hacemos la funcion para controlar el monto a pagar y el cambio a devolver si es necesario
+  const pagoVenta = () => {
+    const filas = document.querySelectorAll(".tabla-info-fila");
+    const total = document.querySelector("#total");
+    const montoRecibido = document.querySelector("#pago");
+    const cambio = document.querySelector("#cambio");
+    const pagoBoton = document.querySelector("#pago_boton");
+    let subtotalMonto = 0;
+
+    filas.forEach((fila) => {
+      const subtotal = fila.querySelector(
+        ".tabla-info-productos.producto_subtotal"
+      );
+      const valor = subtotal ? subtotal.textContent.trim() : "0";
+
+      // Elimina el formato de moneda y convierte el valor a número
+      const numero = parseFloat(valor.replace(/[^0-9.-]+/g, "")); // Solo deja dígitos, puntos y guiones
+      subtotalMonto += numero;
+    });
+
+    total.value = new Intl.NumberFormat("es-MX", {
+      style: "currency",
+      currency: "MXN",
+    }).format(subtotalMonto);
+
+    pagoBoton.addEventListener("click", (event) => {
+      event.preventDefault();
+      const cambioValor = parseFloat(montoRecibido.value) - subtotalMonto || 0;
+      cambio.value = new Intl.NumberFormat("es-MX", {
+        style: "currency",
+        currency: "MXN",
+      }).format(cambioValor);
+    });
+  };
 });

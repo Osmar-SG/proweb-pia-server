@@ -137,7 +137,7 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="fecha">Fecha:</label>
-                            <input type="date" id="fecha" >
+                            <input type="date" id="fecha" class="fecha_venta" >
                         </div>
                         <div class="form-group">
                             <label for="documento">Tipo de documento:</label>
@@ -204,13 +204,16 @@
                                 <div class="form-group">
                                     <p class="texto-datos-venta">Paga con:</p>
                                     <input type="text" id="pago">
+                                    <button class="btn btn-success btn-sm" id="pago_boton">
+                                        Enviar Monto
+                                    </button>
                                 </div>
                                 <div class="form-group">
                                     <p class="texto-datos-venta">Cambio:</p>
                                     <input type="text" id="cambio" readonly>
                                 </div>
                                 <button class="create-sale">
-                                    <div class="row">
+                                    <div class="row crearVenta_button">
                                         <div class="col-lg-6">
                                             <img class="img-icon-money" src="images/ICON-MONEY.png" alt="">
                                         </div>
