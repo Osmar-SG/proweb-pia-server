@@ -2,7 +2,7 @@ const { Rol } = require("../db");
 
 const rol = [
   {
-    nombre: "Vendedor",
+    nombre: "Administrador",
     userId: 1,
   },
   {
