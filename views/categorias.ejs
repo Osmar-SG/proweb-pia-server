@@ -57,9 +57,6 @@
             </div>
 
             <div class="contenido-detalle-categoria">
-
-
-
                 <div class="row">
                     <div class="col-lg-4 row bloque-datos-categoria">
                         <div class="col-lg-12">
@@ -76,12 +73,12 @@
                         </div>
                         <div class="col-lg-12">
                             <select class="seleccion-tipo-reporte-categoria estadoCategoria" name="reporte">
-                                <option value="diario">ACTIVO</option>
-                                <option value="semanal">INACTIVO</option>
+                                <option value="0">INACTIVO</option>
+                                <option value="1">ACTIVO</option>
                             </select>
                         </div>
                         <div class="col-lg-12 centrar">
-                            <button class="btn-crud btn-crud-colors-1">
+                            <button class="btn-crud btn-crud-colors-1" id="guardar">
                                 <div class="row">
                                     <div class="col-lg-1">
                                         <img class="icon-btns-crud" src="/images/ICON-SAVE.png" alt="">
@@ -104,18 +101,6 @@
                                 </div>
                             </button>
                         </div>
-                        <div class="col-lg-12 centrar">
-                            <button class="btn-crud btn-crud-colors-3">
-                                <div class="row">
-                                    <div class="col-lg-1">
-                                        <img class="icon-btns-crud" src="/images/ICON-TRASH-BLACK.png" alt="">
-                                    </div>
-                                    <div class="col-lg-11">
-                                        <p class="texto-btn-crud-dentro">ELIMINAR</p>
-                                    </div>
-                                </div>
-                            </button>
-                        </div>
                     </div>
 
 
@@ -132,7 +117,7 @@
                                     <input class="input-texto-historial-busqueda" placeholder="Descripción" type="text">
                                 </div>
                                 <div class="col-lg-3">
-                                    <input class="input-texto-historial-busqueda" type="text">
+                                    <input class="input-texto-historial-busqueda" type="text" placeholder="Estado">
                                 </div>
                                 <div class="col-lg-1">
                                     <button class="texto-informacion-venta"><img class="icon-lupa"
@@ -151,13 +136,13 @@
                             <table>
                                 <thead>
                                     <tr>
-                                        <th class="tabla-columna-principal"></th>
-                                        <th class="tabla-columna-principal"></th>
-                                        <th class="tabla-columna-principal">DESCRIPCIÓN</th>
+                                        <th class="tabla-columna-principal" width="20px"></th>
+                                        <th class="tabla-columna-principal" width="20px"></th>
+                                        <th class="tabla-columna-principal">NOMBRE</th>
                                         <th class="tabla-columna-principal">ESTADO</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="tbody">
                                     <tr>
                                         <td class="tabla-info-productos"></td>
                                         <td class="tabla-info-productos"></td>

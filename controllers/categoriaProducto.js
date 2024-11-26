@@ -25,15 +25,13 @@ module.exports = {
   },
   editarCategoria: async (req, res) => {
     const { id } = req.params
-    const { nombre, descripcion, imagen, status } = req.body
+    const { nombre, status } = req.body
     try {
       const categoria = await CategoriaProducto.update({
         nombre,
-        descripcion,
-        imagen,
         status
       }, { where: { id } })
-      res.status(200).json(categoria)
+      res.status(200).json({ message: "Categoria actualizada" })
     } catch (error) {
       res.status(400).json({ message: error.message })
     }
@@ -42,6 +40,7 @@ module.exports = {
     const { id } = req.params
     try {
       await CategoriaProducto.destroy({ where: { id } })
+      res.status(200).json({ message: "Categoria eliminada" })
     } catch (error) {
       res.status(400).json({ message: error.message })
     }
