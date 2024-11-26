@@ -10,7 +10,7 @@ let sequelize = new Sequelize(
   // Conexion Enrique
   //`mysql://root:papu123@localhost:3306/pia_proweb`,
 
-  // `mysql://root:osmar2429@localhost:3306/pia_proweb`,
+  //`mysql://root:osmar2429@localhost:3306/pia_proweb`,
 
   // `mysql://root:Tigre$22@localhost:3306/pia_proweb`,
   {
