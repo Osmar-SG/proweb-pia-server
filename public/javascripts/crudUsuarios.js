@@ -16,7 +16,9 @@ function cargarUsuarios() {
 
             $("#tbody").append(`
             <tr>
-                <td class="tabla-info-productos user-id" data-user="${usuario.id}"><input type="checkbox"></td>
+                <td class="tabla-info-productos user-id">
+                    <input class="btn btn-danger" type="button" data-user="${usuario.id}" value="Eliminar">
+                </td>
                 <td class="tabla-info-productos">${usuario.nombre}</td>
                 <td class="tabla-info-productos">${usuario.rol.nombre}</td>
                 <td class="tabla-info-productos">${estado}</td>
