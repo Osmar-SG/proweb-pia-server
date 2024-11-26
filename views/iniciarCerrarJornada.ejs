@@ -12,35 +12,22 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-nav">
-        <div class="container-fluid">
-            <!-- Logo -->
-            <a class="navbar-brand" href="#">
-                <img src="https://images.rappi.com.mx/restaurants_logo/logo-1697308077363.png" alt="Logo" width="50">
-            </a>
-
-            <!-- Botón colapsable (para móviles) -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Contenido del navbar -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <!-- Título centrado -->
-                <div class="w-100 d-flex justify-content-center">
-                    <h3 class="m-0">Sistema de Ventas</h3>
-                </div>
-                <!-- Usuario y logout -->
-                <div class="d-flex align-items-center">
+    <header>
+        <div class="row justify-content-center bg-nav">
+            <div class="col-lg-3 centrar"><a href="/index.ejs"> <img class="logo" src="/images/logo.png " alt=""></a></div>
+            <div class="col-lg-6 centrar">
+                <p class="titulo">SISTEMA DE VENTAS</p>
+            </div>
+            <div class="row col-lg-3 centrar">
+                <div class="col-lg-8">
                     <p class="texto-usuario">USUARIO: <span class="usuario-nombre"></span></p>
-                    <img src="https://cdn.icon-icons.com/icons2/2248/PNG/512/logout_variant_icon_136438.png"
-                        width="50px">
+                </div>
+                <div class="col-lg-4">
+                    <a href="/"><img class="logout" src="/images/logout.png" alt=""></a>
                 </div>
             </div>
         </div>
-    </nav>
+    </header>
 
     <div class="row m-3">
         <div class="col-lg-4">
