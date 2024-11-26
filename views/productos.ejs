@@ -1,228 +1,289 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-    <meta charset="UTF-8">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-        <link rel="stylesheet" href="/stylesheets/bootstrap.css">
-        <link rel="stylesheet" href="/stylesheets/style.css">
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="row justify-content-center bg-nav">
-            <div class="col-lg-3 centrar"><a href="/principal"> <img class="logo" src="/images/logo.png " alt=""></a></div>
-            <div class="col-lg-6 centrar">
-                <p class="titulo">SISTEMA DE VENTAS</p>
-            </div>
-            <div class="row col-lg-3 centrar">
-                <div class="col-lg-8">
-                    <p class="texto-usuario">USUARIO: <span class="usuario-nombre"></span></p>
-                </div>
-                <div class="col-lg-4">
-                    <a href="/principal"><img class="logout" src="/images/logout.png" alt=""></a>
-                </div>
-            </div>
+      <div class="row justify-content-center bg-nav">
+        <div class="col-lg-3 centrar">
+          <a href="/principal">
+            <img class="logo" src="/images/logo.png " alt=""
+          /></a>
         </div>
+        <div class="col-lg-6 centrar">
+          <p class="titulo">SISTEMA DE VENTAS</p>
+        </div>
+        <div class="row col-lg-3 centrar">
+          <div class="col-lg-8">
+            <p class="texto-usuario">
+              USUARIO: <span class="usuario-nombre"></span>
+            </p>
+          </div>
+          <div class="col-lg-4">
+            <a href="/principal"
+              ><img class="logout" src="/images/logout.png" alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
     </header>
 
-
     <div class="container-fluid vh-100">
+      <main>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="row btn-superior">
+              <div class="col-lg-4">
+                <a href="/principal">
+                  <button class="back-button" aria-label="Volver">
+                    <img
+                      class="flecha-izq"
+                      src="/images/flechaizq.png"
+                      alt=""
+                    />
+                  </button>
+                </a>
+              </div>
+              <div class="col-lg-8 titulo-btn-superior">
+                <p>Lista de productos</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <div class="contenido-detalle-productos">
+          <input type="hidden" class="productoId" />
+          <div class="row">
+            <div class="col-lg-4 row bloque-datos-productos">
+              <div class="col-lg-12">
+                <p class="titulo-cuadro-datos-reporte">DETALLE DE PRODUCTO</p>
+              </div>
+              <div class="col-lg-12">
+                <p class="texto-datos-recuadro-reporte-productos">CODIGO:</p>
+              </div>
+              <div class="col-lg-12">
+                <input
+                  class="input-entrada-texto-productos codigoProducto"
+                  type="text"
+                />
+              </div>
+              <div class="col-lg-12">
+                <p class="texto-datos-recuadro-reporte-productos">NOMBRE:</p>
+              </div>
+              <div class="col-lg-12">
+                <input
+                  class="input-entrada-texto-productos nombreProducto"
+                  type="text"
+                />
+              </div>
+              <div class="col-lg-12">
+                <p class="texto-datos-recuadro-reporte-productos">
+                  DESCRIPCIÓN:
+                </p>
+              </div>
+              <div class="col-lg-12">
+                <input
+                  class="input-entrada-texto-productos descripcionProducto"
+                  type="text"
+                />
+              </div>
+              <div class="col-lg-12">
+                <p class="texto-datos-recuadro-reporte-productos">CATEGORÍA:</p>
+              </div>
+              <div class="col-lg-12">
+                <select
+                  class="seleccion-tipo-reporte-producto categoriaProducto"
+                  name="reporte"
+                  id="categoria_select"
+                >
+                  <!-- <option value="diario">PIZZAS</option>
+                  <option value="semanal">ESPECIALIDADES</option>
+                  <option value="mensual">COMPLEMENTOS</option>
+                  <option value="mensual">COMBOS</option>
+                  <option value="mensual">BEBIDAS</option>
+                  <option value="mensual">INGREDIENTES EXTRA</option>
+                  <option value="mensual">POSTRES</option> -->
+                </select>
+              </div>
+              <div class="col-lg-12">
+                <p class="texto-datos-recuadro-reporte-productos">ESTADO:</p>
+              </div>
+              <div class="col-lg-12">
+                <select
+                  class="seleccion-tipo-reporte-producto estadoProducto"
+                  name="reporte"
+                >
+                  <option value="true">ACTIVO</option>
+                  <option value="false">INACTIVO</option>
+                </select>
+              </div>
+              <div class="col-lg-12">
+                <p class="texto-datos-recuadro-reporte-productos">
+                  PRECIO DEL PRODUCTO:
+                </p>
+              </div>
+              <div class="col-lg-12">
+                <input
+                  class="input-entrada-texto-productos precioProducto precioProducto"
+                  type="text"
+                />
+              </div>
+              <div class="col-lg-12">
+                <p class="texto-datos-recuadro-reporte-productos">
+                  EXISTENCIA:
+                </p>
+              </div>
+              <div class="col-lg-12">
+                <input
+                  class="input-entrada-texto-productos existenciaProducto"
+                  type="number"
+                />
+              </div>
+              <div class="col-lg-12 centrar">
+                <button class="btn-crud btn-crud-colors-1 guardar_boton">
+                  <div class="row">
+                    <div class="col-lg-1">
+                      <img
+                        class="icon-btns-crud"
+                        src="/images/ICON-SAVE.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="col-lg-11">
+                      <p class="texto-btn-crud-dentro">GUARDAR</p>
+                    </div>
+                  </div>
+                </button>
+              </div>
+              <div class="col-lg-12 centrar">
+                <button class="btn-crud btn-crud-colors-2" id="crearProducto">
+                  <div class="row">
+                    <div class="col-lg-1">
+                      <img
+                        class="icon-btns-crud"
+                        src="/images/agregar.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="col-lg-11">
+                      <p class="texto-btn-crud-dentro">CREAR NUEVO</p>
+                    </div>
+                  </div>
+                </button>
+              </div>
+              <div class="col-lg-12 centrar">
+                <!-- <button class="btn-crud btn-crud-colors-3">
+                  <div class="row">
+                    <div class="col-lg-1">
+                      <img
+                        class="icon-btns-crud"
+                        src="/images/ICON-TRASH-BLACK.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="col-lg-11">
+                      <p class="texto-btn-crud-dentro">ELIMINAR</p>
+                    </div>
+                  </div>
+                </button> -->
+              </div>
+            </div>
 
-        <main>
-            <div class="row">
+            <div class="col-lg-8">
+              <div class="row contenedor-datos-venta">
                 <div class="col-lg-4">
-                    <div class="row btn-superior">
-                        <div class="col-lg-4">
-                            <a href="/principal">
-                                <button class="back-button" aria-label="Volver"><img class="flecha-izq"
-                                        src="/images/flechaizq.png" alt=""></button>
-                            </a>
-                        </div>
-                        <div class="col-lg-8 titulo-btn-superior">
-                            <p>Lista de productos</p>
-                        </div>
-                    </div>
+                  <p class="titulo-lista-productos">LISTA DE PRODUCTOS</p>
                 </div>
-
-            </div>
-
-            <div class="contenido-detalle-productos">
-
-
-
-                <div class="row">
-                    <div class="col-lg-4 row bloque-datos-productos">
-                        <div class="col-lg-12">
-                            <p class="titulo-cuadro-datos-reporte">DETALLE DE PRODUCTO</p>
-                        </div>
-                        <div class="col-lg-12">
-                            <p class="texto-datos-recuadro-reporte-productos">CODIGO:</p>
-                        </div>
-                        <div class="col-lg-12">
-                            <input class="input-entrada-texto-productos codigoProducto" type="text">
-                        </div>
-                        <div class="col-lg-12">
-                            <p class="texto-datos-recuadro-reporte-productos">NOMBRE:</p>
-                        </div>
-                        <div class="col-lg-12">
-                            <input class="input-entrada-texto-productos nombreProducto" type="text">
-                        </div>
-                        <div class="col-lg-12">
-                            <p class="texto-datos-recuadro-reporte-productos">DESCRIPCIÓN:</p>
-                        </div>
-                        <div class="col-lg-12">
-                            <input class="input-entrada-texto-productos descricpcionProducto" type="text">
-                        </div>
-                        <div class="col-lg-12">
-                            <p class="texto-datos-recuadro-reporte-productos">CATEGORÍA:</p>
-                        </div>
-                        <div class="col-lg-12">
-                            <select class="seleccion-tipo-reporte-producto categoriaProducto" name="reporte">
-                                <option value="diario">PIZZAS</option>
-                                <option value="semanal">ESPECIALIDADES</option>
-                                <option value="mensual">COMPLEMENTOS</option>
-                                <option value="mensual">COMBOS</option>
-                                <option value="mensual">BEBIDAS</option>
-                                <option value="mensual">INGREDIENTES EXTRA</option>
-                                <option value="mensual">POSTRES</option>
-                            </select>
-                        </div>
-                        <div class="col-lg-12">
-                            <p class="texto-datos-recuadro-reporte-productos">ESTADO:</p>
-                        </div>
-                        <div class="col-lg-12">
-                            <select class="seleccion-tipo-reporte-producto estadoProducto" name="reporte">
-                                <option value="diario">ACTIVO</option>
-                                <option value="semanal">INACTIVO</option>
-                            </select>
-                        </div>
-                        <div class="col-lg-12">
-                            <p class="texto-datos-recuadro-reporte-productos">PRECIO DEL PRODUCTO:</p>
-                        </div>
-                        <div class="col-lg-12">
-                            <input class="input-entrada-texto-productos precioProducto precioProducto" type="text">
-                        </div>
-                        <div class="col-lg-12 centrar">
-                            <button class="btn-crud btn-crud-colors-1">
-                                <div class="row">
-                                    <div class="col-lg-1">
-                                        <img class="icon-btns-crud" src="/images/ICON-SAVE.png" alt="">
-                                    </div>
-                                    <div class="col-lg-11">
-                                        <p class="texto-btn-crud-dentro">GUARDAR</p>
-                                    </div>
-                                </div>
-                            </button>
-                        </div>
-                        <div class="col-lg-12 centrar">
-                            <button class="btn-crud btn-crud-colors-2">
-                                <div class="row">
-                                    <div class="col-lg-1">
-                                        <img class="icon-btns-crud" src="/images/ICON-CLEAN.png" alt="">
-                                    </div>
-                                    <div class="col-lg-11">
-                                        <p class="texto-btn-crud-dentro">LIMPIAR</p>
-                                    </div>
-                                </div>
-                            </button>
-                        </div>
-                        <div class="col-lg-12 centrar">
-                            <button class="btn-crud btn-crud-colors-3">
-                                <div class="row">
-                                    <div class="col-lg-1">
-                                        <img class="icon-btns-crud" src="/images/ICON-TRASH-BLACK.png" alt="">
-                                    </div>
-                                    <div class="col-lg-11">
-                                        <p class="texto-btn-crud-dentro">ELIMINAR</p>
-                                    </div>
-                                </div>
-                            </button>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-8">
-                        <div class="row contenedor-datos-venta">
-                            <div class="col-lg-4">
-                                <p class="titulo-lista-productos">LISTA DE PRODUCTOS</p>
-                            </div>
-                            <div class="col-lg-8 row">
-                                <div class="col-lg-4">
-                                    <p class="texto-buscar-historial">Buscar por:</p>
-                                </div>
-                                <div class="col-lg-3">
-                                    <input class="input-texto-historial-busqueda" placeholder="codigo" type="text">
-                                </div>
-                                <div class="col-lg-3">
-                                    <input class="input-texto-historial-busqueda" type="text">
-                                </div>
-                                <div class="col-lg-1">
-                                    <button class="texto-informacion-venta"><img class="icon-lupa" src="/images/ICON-SEARCH.png" alt=""></button>
-                                </div>
-                                <div class="col-lg-1">
-                                    <button class="texto-informacion-venta"><img class="icon-lupa" src="/images/ICON-CLEAN.png" alt=""></button>
-                                </div>
-                            </div>
-                            
-                        </div>
-
-
-                        <div class="row contenedor-datos-venta">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th class="tabla-columna-principal"></th>
-                                        <th class="tabla-columna-principal"></th>
-                                        <th class="tabla-columna-principal">CODIGO</th>
-                                        <th class="tabla-columna-principal">NOMBRE</th>
-                                        <th class="tabla-columna-principal">DESCRIPCIÓN</th>
-                                        <th class="tabla-columna-principal">ESTADO</th>
-                                        <th class="tabla-columna-principal">PRECIO DEL PRODUCTO</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="tabla-info-productos"></td>
-                                        <td class="tabla-info-productos"></td>
-                                        <td class="tabla-info-productos"></td>
-                                        <td class="tabla-info-productos"></td>
-                                        <td class="tabla-info-productos"></td>
-                                        <td class="tabla-info-productos"></td>
-                                        <td class="tabla-info-productos"></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            
-                        </div>
-                    </div>
-
-
+                <div class="col-lg-8 row">
+                  <div class="col-lg-4">
+                    <p class="texto-buscar-historial">Buscar por:</p>
+                  </div>
+                  <div class="col-lg-3">
+                    <input
+                      class="input-texto-historial-busqueda codigo_buscar"
+                      placeholder="Código"
+                      type="text"
+                    />
+                  </div>
+                  <div class="col-lg-3">
+                    <input
+                      class="input-texto-historial-busqueda nombre_buscar"
+                      placeholder="Nombre"
+                      type="text"
+                    />
+                  </div>
+                  <div class="col-lg-1">
+                    <button class="texto-informacion-venta boton_buscar">
+                      <img
+                        class="icon-lupa"
+                        src="/images/ICON-SEARCH.png"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                  <div class="col-lg-1">
+                    <button class="texto-informacion-venta limpiar_buscar">
+                      <img
+                        class="icon-lupa"
+                        src="/images/ICON-CLEAN.png"
+                        alt=""
+                      />
+                    </button>
+                  </div>
                 </div>
+              </div>
 
-
+              <div class="row contenedor-datos-venta">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="tabla-columna-principal"></th>
+                      <th class="tabla-columna-principal"></th>
+                      <th class="tabla-columna-principal">CODIGO</th>
+                      <th class="tabla-columna-principal">NOMBRE</th>
+                      <th class="tabla-columna-principal">DESCRIPCIÓN</th>
+                      <th class="tabla-columna-principal">ESTADO</th>
+                      <th class="tabla-columna-principal">
+                        PRECIO DEL PRODUCTO
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="table_body">
+                    <!-- <tr>
+                      <td class="tabla-info-productos"></td>
+                      <td class="tabla-info-productos"></td>
+                      <td class="tabla-info-productos"></td>
+                      <td class="tabla-info-productos"></td>
+                      <td class="tabla-info-productos"></td>
+                      <td class="tabla-info-productos"></td>
+                      <td class="tabla-info-productos"></td>
+                    </tr> -->
+                  </tbody>
+                </table>
+              </div>
             </div>
-
-
-
-
-        </main>
+          </div>
+        </div>
+      </main>
     </div>
-
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"></script>
     <script src="/javascripts/jquery.js"></script>
     <script src="/javascripts/bootstrap.js"></script>
     <script src="/javascripts/header.js"></script>
-</body>
-
+    <script src="/javascripts/productos.js"></script>
+  </body>
 </html>
