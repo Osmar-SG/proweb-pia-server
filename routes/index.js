@@ -37,7 +37,7 @@ router.get("/iniciarventa", isAuthenticated, (req, res) => {
   res.render("iniciarventa");
 });
 
-router.get("/usuarios", (req, res) => {
+router.get("/usuarios", isAuthenticated, (req, res) => {
   res.render("usuarios");
 });
 
@@ -45,7 +45,7 @@ router.get("/productos", isAuthenticated, (req, res) => {
   res.render("productos");
 });
 
-router.get("/categorias", isAuthenticated, (req, res) => {
+router.get("/categorias", (req, res) => {
   res.render("categorias");
 });
 
