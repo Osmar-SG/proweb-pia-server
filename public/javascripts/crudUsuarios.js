@@ -54,5 +54,41 @@ $(document).ready(function () {
         let userID = $(this).attr("data-user")
         eliminarUsuarios(userID)
     })
+
+    function filterTable() {
+        const nameFilter = $("#searchName").val().toLowerCase();
+        const roleFilter = $("#searchRole").val().toLowerCase();
+        const stateFilter = $("#searchState").val().toLowerCase();
+
+        $("#tbody tr").each(function () {
+            const name = $(this).find("td:nth-child(2)").text().toLowerCase();
+            const role = $(this).find("td:nth-child(3)").text().toLowerCase();
+            const state = $(this).find("td:nth-child(4)").text().toLowerCase();
+
+            // Mostrar fila si todos los filtros coinciden
+            if (
+                name.includes(nameFilter) &&
+                role.includes(roleFilter) &&
+                state.includes(stateFilter)
+            ) {
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+        });
+    }
+
+    // Filtrar al escribir en los inputs
+    $("#searchName, #searchRole, #searchState").on("input", function () {
+        filterTable();
+    });
+
+    // Limpiar filtros
+    $("#clearBtn").click(function () {
+        $("#searchName").val("");
+        $("#searchRole").val("");
+        $("#searchState").val("");
+        $("#tbody tr").show();
+    });
 })
 
