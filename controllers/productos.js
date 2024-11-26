@@ -46,4 +46,55 @@ module.exports = {
       res.status(400).json({ message: error.message });
     }
   },
+  crearProducto: async (req, res) => {
+    const {
+      nombre,
+      descripcion,
+      precio,
+      existencia,
+      status,
+      codigo,
+      categoriaProductoId,
+    } = req.body;
+    try {
+      const producto = await Producto.create({
+        nombre,
+        descripcion,
+        precio,
+        existencia,
+        status,
+        codigo,
+      });
+      const categoria = await CategoriaProducto.findOne({
+        where: { id: categoriaProductoId },
+      });
+      await categoria.addProductos(producto);
+      res.status(200).json(producto);
+    } catch (error) {
+      res.status(400).json({ message: error.message });
+    }
+  },
+  eliminarProducto: async (req, res) => {
+    const { id } = req.params;
+    try {
+      await Producto.destroy({ where: { id } });
+      res.status(200).json({ message: "Producto borrado con éxito" });
+    } catch (error) {
+      res.status(400).json({ message: error.message });
+    }
+  },
+  editarProducto: async (req, res) => {
+    const { nombre, descripcion, precio, existencia, status, codigo } =
+      req.body;
+    const { id } = req.params;
+    try {
+      const producto = await Producto.update(
+        { nombre, descripcion, precio, existencia, status, codigo },
+        { where: { id } }
+      );
+      res.status(200).json(producto);
+    } catch (error) {
+      res.status(400).json({ message: error.message });
+    }
+  },
 };
