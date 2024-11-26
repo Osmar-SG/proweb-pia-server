@@ -11,5 +11,8 @@ module.exports = (sequelize) => {
     total_ventas: {
       type: DataTypes.FLOAT,
     },
+    diferencia: {
+      type: DataTypes.FLOAT,
+    }
   });
 };

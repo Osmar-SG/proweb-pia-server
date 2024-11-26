@@ -73,7 +73,7 @@ router.get("/historialcortecaja", isAuthenticated, (req, res) => {
   res.render("historialcortecaja");
 });
 
-router.get("/cortecaja", (req, res) => {
+router.get("/cortecaja", isAuthenticated, (req, res) => {
   res.render("iniciarCerrarJornada");
 });
 

@@ -39,6 +39,7 @@ $(document).ready(function () {
     });
 
     let efectivoCaja, ingreso, diferencia
+
     // Evento para cerrar jornada
     $('#cerrarJornada').click(function () {
         finJornada = obtenerFechaHora();
@@ -56,6 +57,22 @@ $(document).ready(function () {
         diferencia = $('#diferencia').val()
 
         console.log(efectivoCaja, ingreso, diferencia)
+
+        $.ajax({
+            url: `/cortecaja/${user.id}`,
+            type: "POST",
+            dataType: "json",
+            data: {
+                fecha: $("#fechaHoy").val(),
+                total_efectivo: efectivoCaja,
+                total_ventas: ingreso,
+                diferencia: diferencia
+            }
+        }).done(function (response) {
+            alert(`Exito: ${response}`)
+        }).fail(function (xhr, status, error) {
+            alert(`Error: ${error}`)
+        })
     });
 
     $('#efectivoCaja').on("keyup", function () {
