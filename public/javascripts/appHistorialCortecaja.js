@@ -1,5 +1,3 @@
-
-
 document.getElementById('btnFiltrar').addEventListener('click', function () {
     const fechaInicio = document.getElementById('fechaInicio').value;
     const fechaFin = document.getElementById('fechaFin').value;
@@ -25,15 +23,37 @@ document.getElementById('btnFiltrar').addEventListener('click', function () {
     });
 });
 
-document.getElementById('btnJornada').addEventListener('click', function () {
-    const btn = this;
-    if (btn.innerText.includes('Iniciar')) {
-        btn.innerText = 'Cerrar jornada';
-        btn.classList.remove('btn-dark');
-        btn.classList.add('btn-danger');
-    } else {
-        btn.innerText = 'Iniciar jornada';
-        btn.classList.remove('btn-danger');
-        btn.classList.add('btn-dark');
-    }
-});
+$(document).ready(function () {
+    console.log("works");
+
+    $.ajax({
+        url: "/cortecaja/obtenertodos",
+        type: "GET",
+        dataType: "json",
+    }).done(function (result) {
+        console.log(result);
+        const sortedData = result.sort((a, b) => {
+            // Convertir las fechas de formato "dd/mm/yyyy" a objetos Date
+            const dateA = new Date(a.fecha.split("/").reverse().join("-"));
+            const dateB = new Date(b.fecha.split("/").reverse().join("-"));
+            return dateA - dateB; // Orden ascendente
+        });
+        console.log(sortedData);
+
+        sortedData.forEach(data => {
+            $("#tbody").append(`
+                <tr>
+                    <td>${data.fecha}</td>
+                    <td>${data.total_efectivo}</td>
+                    <td>Cierre</td>
+                    <td>${data.usuario.nombre}</td>
+                    <td>${data.total_ventas}</td>
+                    <td>${data.diferencia}</td>
+                </tr>
+            `)
+        })
+
+    }).fail(function (xhr, status, error) {
+        alert(`Error: ${error}`)
+    })
+})

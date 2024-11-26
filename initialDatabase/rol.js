@@ -17,6 +17,14 @@ const rol = [
     nombre: "Vendedor",
     userId: 4,
   },
+  {
+    nombre: "Vendedor",
+    userId: 5,
+  },
+  {
+    nombre: "Administrador",
+    userId: 6,
+  },
 ];
 
 module.exports = {

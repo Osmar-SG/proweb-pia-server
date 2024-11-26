@@ -13,5 +13,6 @@ router.post("/logout", usersFunctions.logout);
 //PUT Methods
 
 //DELETE Methods
+router.delete("/borrar/:id", usersFunctions.eliminarUsuario);
 
 module.exports = router;

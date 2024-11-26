@@ -45,7 +45,7 @@ router.get("/productos", isAuthenticated, (req, res) => {
   res.render("productos");
 });
 
-router.get("/categorias", isAuthenticated, (req, res) => {
+router.get("/categorias", (req, res) => {
   res.render("categorias");
 });
 
@@ -73,7 +73,7 @@ router.get("/historialcortecaja", isAuthenticated, (req, res) => {
   res.render("historialcortecaja");
 });
 
-router.get("/cortecaja", (req, res) => {
+router.get("/cortecaja", isAuthenticated, (req, res) => {
   res.render("iniciarCerrarJornada");
 });
 

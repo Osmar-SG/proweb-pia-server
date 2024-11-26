@@ -97,4 +97,13 @@ module.exports = {
       res.status(200).json({ message: "Sesión terminada con éxito" });
     });
   },
+  eliminarUsuario: async (req, res) => {
+    const { id } = req.params
+    try {
+      await User.destroy({ where: { id } })
+      res.status(200).json({ message: "Usuario eliminado con exito" })
+    } catch (error) {
+      res.status(400).json({ message: error.message })
+    }
+  }
 };
