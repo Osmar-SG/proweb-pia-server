@@ -46,7 +46,7 @@ $(document).ready(function () {
                     <td>${data.fecha}</td>
                     <td>${data.total_efectivo}</td>
                     <td>Cierre</td>
-                    <td>${data.user.nombre}</td>
+                    <td>${data.usuario.nombre}</td>
                     <td>${data.total_ventas}</td>
                     <td>${data.diferencia}</td>
                 </tr>

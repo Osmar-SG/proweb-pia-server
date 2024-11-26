@@ -37,7 +37,7 @@ router.get("/iniciarventa", isAuthenticated, (req, res) => {
   res.render("iniciarventa");
 });
 
-router.get("/usuarios", isAuthenticated, (req, res) => {
+router.get("/usuarios", (req, res) => {
   res.render("usuarios");
 });
 
@@ -69,11 +69,11 @@ router.get("/reporteventas", isAuthenticated, (req, res) => {
   res.render("reporteventas");
 });
 
-router.get("/historialcortecaja", (req, res) => {
+router.get("/historialcortecaja", isAuthenticated, (req, res) => {
   res.render("historialcortecaja");
 });
 
-router.get("/cortecaja", (req, res) => {
+router.get("/cortecaja", isAuthenticated, (req, res) => {
   res.render("iniciarCerrarJornada");
 });
 
