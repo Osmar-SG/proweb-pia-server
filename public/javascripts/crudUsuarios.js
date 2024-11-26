@@ -5,7 +5,7 @@ function cargarUsuarios() {
         dataType: "json",
     }).done(function (result) {
         console.log(result);
-
+        $("#tbody").empty()
         result.forEach(usuario => {
             let estado = "";
             if (usuario.status) {
@@ -31,6 +31,28 @@ function cargarUsuarios() {
     })
 }
 
+function eliminarUsuarios(id) {
+    $.ajax({
+        url: `/usuario/borrar/${id}`,
+        type: "DELETE",
+        dataType: "json",
+    }).done(function (result) {
+        alert(`Exito: ${result.message}`)
+        cargarUsuarios()
+    }).fail(function (xhr, status, error) {
+        alert(`Error: ${error.message}`)
+    })
+}
+
 $(document).ready(function () {
     cargarUsuarios()
+
+    console.log("WORKS");
+
+    $(document).on("click", ".btn-danger", function () {
+        console.log("Borrado user", $(this).attr("data-user"))
+        let userID = $(this).attr("data-user")
+        eliminarUsuarios(userID)
+    })
 })
+
