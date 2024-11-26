@@ -32,6 +32,22 @@ function cargarCategorias() {
     })
 }
 
+function crearCategoria(nombre, descripcion, imagen, status) {
+    $.ajax({
+        url: `/categoriaProducto/crear`, // Endpoint correcto
+        type: "POST", // Método correcto
+        data: JSON.stringify({ nombre, descripcion, imagen, status }), // Cuerpo de la solicitud como JSON
+        contentType: "application/json", // Especifica que el contenido es JSON
+        dataType: "json", // Espera una respuesta JSON
+    }).done(function (result) {
+        alert(`Éxito: ${result.message}`);
+        cargarCategorias();
+    }).fail(function (xhr, status, error) {
+        console.error(xhr.responseText);
+        alert(`Error: ${xhr.responseText || error}`);
+    });
+}
+
 function eliminarCategoria(id) {
     $.ajax({
         url: `/categoriaProducto/eliminar/${id}`,
@@ -137,9 +153,17 @@ $(document).ready(function () {
     $(document).on('click', '#guardar', function () {
         let nombre = $('.descricpcionCategoria').val(),
             estado = $('.estadoCategoria').val(),
-            id = $('#guardar').attr('data-id')
-        console.log(id, nombre, estado);
+            id = parseInt($('#guardar').attr('data-id'))
 
         actualizarCategoria(id, nombre, estado)
+    })
+
+    $(document).on('click', '#crear', function () {
+        let nombre = $('.descricpcionCategoria').val(),
+            estado = ($('.estadoCategoria').val())
+
+        console.log(nombre, "texto de ejemplo", "url de ejemplo", estado);
+
+        crearCategoria(nombre, "texto de ejemplo", "url de ejemplo", estado)
     })
 })
